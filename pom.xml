@@ -41,6 +41,12 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
+		<!-- SpringDoc OpenAPI UI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.14</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
