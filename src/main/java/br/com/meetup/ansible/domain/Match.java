@@ -33,6 +33,10 @@ public class Match implements Serializable {
 
 	private int awayTeamGoals;
 
+	private String league;
+
+	private String season;
+
 	public Match() {
 	}
 
@@ -82,6 +86,22 @@ public class Match implements Serializable {
 
 	public void setAwayTeamGoals(int awayTeamGoals) {
 		this.awayTeamGoals = awayTeamGoals;
+	}
+
+	public String getLeague() {
+    return league;
+	}
+
+	public void setLeague(String league) {
+		this.league = league;
+	}
+
+	public String getSeason() {
+		return season;
+	}
+
+	public void setSeason(String season) {
+		this.season = season;
 	}
 
 	@Override
