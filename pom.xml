@@ -18,6 +18,11 @@
 		<java.version>17</java.version>
 		<jacoco.version>0.7.9</jacoco.version>
 		<sonar.junit.reportPaths>target/surefire-reports,target/failsafe-reports</sonar.junit.reportPaths>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
 	</properties>
 
 	<dependencies>
@@ -43,11 +48,14 @@
 		</dependency>
 		<!-- SpringDoc OpenAPI UI -->
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.6.15</version>
 		</dependency>
 		<dependency>
+=======
+>>>>>>> 4191ca7a67edefd0c1a44bdfc691a36d97c77917
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
