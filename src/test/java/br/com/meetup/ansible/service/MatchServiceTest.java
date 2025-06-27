@@ -42,4 +42,37 @@ public class MatchServiceTest {
         assertThat(matchService.listExactMatches("juventus", "lazio"), not(emptyCollectionOf(Match.class)));
     }
 
+    @Mock
+    private MatchRepository matchRepository;
+
+    @InjectMocks
+    private MatchService matchService;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void shouldReturnAllMatches() {
+        Match match = new Match();
+        Team juventus = new Team();
+        juventus.setName("juventus");
+        Team milan = new Team();
+        milan.setName("milan");
+
+        match.setHomeTeam(juventus);
+        match.setAwayTeam(milan);
+        match.setHomeGoals(2);
+        match.setAwayGoals(1);
+
+        List<Match> matches = Arrays.asList(match);
+
+        when(matchRepository.findAll()).thenReturn(matches);
+
+        List<MatchDTO> result = matchService.findAll();
+
+        assertEquals(1, result.size());
+    }
+
 }
